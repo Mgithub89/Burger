@@ -2,9 +2,26 @@
 
 <h2>All Burgers</h2>
 
+<ul>
+    {{#each burgers}}
+    {{#unless this.devoured}}
+    <p> {{this.id}}. {{this.burger_name}}
 
+        <button data-id="{{this.id}}" class="devburger">Devoured</button>
+    </p>
+    {{/unless}}
+    {{/each}}
+</ul>
+<hr>
 <h2>Devoured Burgers</h2>
-
+<ul>
+    {{#each burgers}}
+    {{#if this.devoured}}
+    <p> {{this.id}}. {{this.burger_name}} </p>
+    {{/if}}
+    {{/each}}
+</ul>
+<hr>
 <h2>Add A Burger</h2>
 <form class="create-form">
 
@@ -12,12 +29,5 @@
         <label for="burg">Burger Name:</label>
         <input type="text" id="burg" name="name">
     </div>
-
-    {{!-- <div class="form-group">
-    <label for="eaten">Devoured?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
-
     <button type="submit">Add Burger</button>
 </form>
