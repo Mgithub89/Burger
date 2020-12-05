@@ -1,33 +1,42 @@
-<h1>Burgers Menu</h1>
+<div class="container w-75">
+    <h1 class="display-4 text-center">Burgers Menu</h1>
+    <img src="http://clipground.com/images/beefburger-clipart-4.jpg" alt="">
+    <div class="row">
+        <div class="col-6">
+            <h3 class="pl-3">All Burgers</h3>
+            <ul>
+                {{#each burgers}}
+                {{#unless this.devoured}}
+                <p> {{this.id}}. {{this.burger_name}}
 
-<h2>All Burgers</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#unless this.devoured}}
-    <p> {{this.id}}. {{this.burger_name}}
-
-        <button data-id="{{this.id}}" class="devburger">Devoured</button>
-    </p>
-    {{/unless}}
-    {{/each}}
-</ul>
-<hr>
-<h2>Devoured Burgers</h2>
-<ul>
-    {{#each burgers}}
-    {{#if this.devoured}}
-    <p> {{this.id}}. {{this.burger_name}} </p>
-    {{/if}}
-    {{/each}}
-</ul>
-<hr>
-<h2>Add A Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burg">Burger Name:</label>
-        <textarea type="text" id="burg" name="name"></textarea>
+                    <button class="btn-warning devburger" data-id="{{this.id}}">Devour It</button>
+                </p>
+                {{/unless}}
+                {{/each}}
+            </ul>
+            <hr>
+        </div>
+        <div class="col-6 text-muted">
+            <h3>Devoured Burgers</h3>
+            <ul>
+                {{#each burgers}}
+                {{#if this.devoured}}
+                <p> {{this.id}}. {{this.burger_name}} </p>
+                {{/if}}
+                {{/each}}
+            </ul>
+            <hr>
+        </div>
     </div>
-    <button type="submit">Add Burger</button>
-</form>
+    <div class="text-center">
+
+        <form class="create-form">
+
+            <div class="form-group">
+
+                <textarea type="text" id="burg" name="name" placeholder="Your Burger Choice"></textarea>
+            </div>
+            <button class="btn-success" type="submit">Add Burger</button>
+        </form>
+    </div>
+</div>
