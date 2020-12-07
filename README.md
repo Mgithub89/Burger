@@ -23,7 +23,8 @@ Explore the [project-page](https://github.com/Mgithub89/burger.git)
 * install all the dependencies(npm i ...).
 
 ## usage
-1. Fork the repo 
+1. Fork the repo or use the Deployed heroku link.
+
 * Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
 * Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- waiting to be devoured.
