@@ -4,6 +4,8 @@
  
 Explore the [project-page](https://github.com/Mgithub89/burger.git)
 
+* View the [Deployed App](https://evening-dawn-38535.herokuapp.com/)
+
 ## Description
   A burger logger app with MySQL,Node,Express,Handlebars and homemade ORM. This App follws the MVC design pattern;uses Node and MySQL to query and route data in the app, and Handlebars to generate the HTML. 
  
@@ -31,7 +33,7 @@ Explore the [project-page](https://github.com/Mgithub89/burger.git)
 * The app will store every burger in a database, whether devoured or not.
 
 ## Screen Shoot
-![image](public/assets/img/BurgerApp.PNG)
+![image](public/assets/img/Eat.PNG)
 
 ## Technologies used
 * MySQL
